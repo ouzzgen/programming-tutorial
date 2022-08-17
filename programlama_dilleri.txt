@@ -1,0 +1,118 @@
+Programlama dilleri, bilgisayara iş yaptırılmasını sağlayan
+araçlardır.
+
+Aslında bilgisayar, yalnızca sayılardan oluşan "makine dili" ni anlar ama bu
+dilin de insanlar tarafından anlaşılması zor olduğundan, "insan dili" ni andıran
+daha üst düzey programlama dilleri geliştirilmiştir. Bununla birlikte, eni sonu
+her programlama dili, bir aşamada, makine diline çevrilir ve bu dildeki
+komutları algılayan bilgisayar, işlemleri yürütür.
+
+Programlama dilleri çeşitli açılardan çeşitli biçimlerde
+sınıflandırılabilir. İlk elde, i̇nsan kavrayışı - makine kavrayışı bağlamında,
+alt düzey - üst düzey programlama  dillerinden bahsedilebilir; donanıma daha
+yakın, daha az soyutlama özelliklerine sahip diller, "alt düzey diller" olarak
+kabul edilebilirken, insan dillerine daha yakın, yüksek soyutlama özellikleri
+bulunan diller "üst düzey programlama diller" olarak kabul edilebilir.
+
+Üst düzey dillerin "daha yetenekli" olduğu düşünülebilirse de, bu durum "neye
+göre daha yetenekli" sorusu sorulmadan sağlıklı bir şekilde yanıtlamaz. Yüksek
+düzey dillerdeki kimi soyutlamalar, bazı durumlarda, dilin alt düzey işlemleri
+gerçekleştirebilmesini çok güçleştirebilir ya da olanaksız kılabilir ve bu
+nedenle, kimi durumlarda, dil, alt düzey olanaklara gereksinim duyduğunda, bu
+gereksinimini ancak daha alt düzey bir dilin yardımıyla gerçekleştirebilir.
+
+Bu teknik durumun dışında, bu deyimlerle, "üst düzey programlama dili" bilen bir
+programcı, alt düzey programlama dili (örneğin assembly dili) bilen bir
+programcıdan daha ustadır gibi bir algı yanılgısı oluşabilir; oysa, üst düzey
+diller, programcıya pek çok kolaylaştırıcı olanak sağladıklarından, teknik
+bilgisi henüz çok düşük düzeydeki bir insan bile, bu dillerle, alt düzey
+dillerle yapılması oldukça zor programları, kısa zamanda yapabilir. Bununla
+birlikte, bir programcı açısından en iyi stratejinin, bir alt düzey programlama
+diliyle, en az bir üst düzey programlama dili öğrenmek olduğu söylenebilir. Alt
+düzey diller, genellikle, kimi kritik durumlar ve hız için gereksinim
+duyulurken, üst düzey diller, uygulamaların daha hızlı ve bakımı kolay olarak
+geliştirilmelerine yardım ederler. Bir diğer nokta ise, alt düzey diller,
+programcının alt düzeyde neler olduğunu öğrenerek gelişmesini sağlarlar.
+Öte yandan, aslında bu ayrımlar çok kesin değildir ve hem alt düzey, hem üst
+düzey olanakları olabildiğince beraber sağlamaya çalışan programlama dilleri de
+bulunur; buna rust programlama dilini ve onun hem atalarından, hem de
+çağdaşlarından olan c++ dilini örnek verebiliriz. Her ikisi de sistem
+ve uygulama geliştirme dili olarak tasarlanan bu diller, alt ve üst düzey
+çeşitli olanakları bünyelerinde barındırırlar.
+
+Diller, derlemeli ya da yorumlamalı olmaları bakımından da sınıflandırılabilir.
+Derlenen dirlerde, kaynak kod, bir dilden öbürüne, bütün halinde hedef dildeki
+dosya(lar) olarak derlenirler. Eğer sonuç dil, makine diliyse, bu dosya işlemci
+tarafından doğrudan çalıştırılabilir. Bu tür derlemenin en temel derleme olduğu
+söylenebilir.
+Sonuç dosyası, bir sanal makine(virtual machine) çalışacak bir
+dosyada olabilir; örneğin java dilinin derlenen komutları, jvm (java virtual
+machine) üzerinde çalışırlar.
+Gerçek ya da sanal makine dışında, bir derleyici, kaynak dosyayı, başka bir
+programlama diline de derleyebilir. Böyle derleyicilere "transpiler" denilir.
+Bu durumda, sonuç dosya üzerindeki işlem, derlenmiş olduğu dilin özelliklerine
+bağlıdır. Örneğin, x dili, y dosyasını y.cpp olarak c++ diline derlerse, y.cpp
+dosyasının da c++ derleyicisi tarafından yeniden derlenmesiyle, doğrudan
+çalıştırılabilir dosya(lar) oluşturulabilir (executive files).
+
+Yorumlanan dillerde ise, yorumlayıcı kaynak dosyayı doğrudan satır satır ya da
+bloklar halinde değerlendirir ve okuduğu kodlara göre dosyayı çalıştırır.
+
+Bununla birlikte, yorumlanan dillerde de kimi zaman byte-code derlenmesinden
+yararlanılmakta ve böylece programın daha hızlı çalışması amaçlanmaktadır.
+
+Bir diğer sınıflandırma ölçütü de, dillerin sahip oldukları "paradigmalar" ile
+ilgilidir. Her programlama dili, bir sorunun çözümü için, değişik yollara ve
+teknik özelliklere, soyutlamalara sahip olabilir. Bir anlamda, bir dil belli bir
+mantıksal yapıya sahip olabilir ve sorunları belli bir perspektiften algılayarak
+çözüm getirmeye çalışabilir.
+
+Öte yandan, bir dil, bünyesinde bir kaç paradigmayı da barındırabilir.
+Genellikle, Programlama dilleri, şu paradigmalardan bir ya da bir kaçına
+sahiptirler:
+
+İmperative, functional, declarative, object oriented.
+
+Dillerle ilgili bir ayrım da, dilin kullanım amacının ne olduğuna bağlı olarak
+yapılabilir. Bir programlama dili, bir ya da bir kaç alanda
+kullanılabilir. Aslında, programlama dilleri genellikle benzer işleri yaparlar;
+ama bir dil, herhangi bir alanda özellikle daha güçlü olabilir.
+Bu alanlar, sistem programlama, uygulama programlama, ağ programlama, veri
+analizi, yapay zeka gibi alanlardır.
+Örneğin, yapay zeka deyince lisp, prolog gibi diller ön alırken, ağ
+programlamada, java ve php daha yaygın olarak kullanılabilir. c, c++, rust gibi
+diller sistem programlama denilince akla gelen dillerdendir. Öte yandan, c++,
+oyun ve uygulama geliştirmede de önalmaktadır.
+
+
+0'lar 1'ler
+Bilgisayar, ikilik sayı sistemi ile işgördüğünden, 0 ve 1 sayıları programcılık
+açısından önem taşır ve değişik durumlarda, bu rakamlardan oluşan bireşimlerin
+kazandığı anlamlarla, bilgisayarla iletişim kurulur.
+
+İkilik sayı sistemine dönüşümü kolay olan sekizlik, onaltılık sayı sistemleri de
+sık kullanılır ve pek çok kolaylık sağlar.
+En temelde, "bit" birimi bulunur. "Binary digit" yani "ikili sayı" anlamına
+gelir.
+
+Ardından byte girimi gelir ve 8 bit içerir. Yani her biri iki değer alabilen 8
+hücre.
+
+Bunu megabyte(1024 byte) ve gigabyte(1024 megabyte) gibi daha büyük birimler
+izler.
+
+Bir byte, 2^8 = 256 değişik değer alabilir.
+
+Örneğin, bir byte sekiz bit olduğundan, sekizlik bir sayının ifade ettiği anlama
+göre, değişik işlemler gerçekleştirilebilir.
+
+exe biçimine dönüşmüş dosyaların, işlemcide doğrudan çalışabildiğini
+söylemiştik. Bilgisayar da ikilik sayılardan anlıyorsa, bir exe dosyasını,
+sıfırlar ve birler olarak görebilir miyiz? Yanıt: Elbette ki görebiliriz. Bunu
+sağlayacak çeşitli programlar ve kimi programlama dillerinde, çeşitli olanaklar
+bulunur.
+Bunun için ikilik kodlarını görmek istediğimiz hazırda oluşmuş bir programı
+kullanabilir ya da kendimiz bir çalıştırılabilir dosya oluşturabiliriz. Makine
+dili karmaşık olduğundan, programımızın küçük ve basit olması daha uygun olacaktır.
+
+ 
